@@ -1,0 +1,1 @@
+npm start --prefix backend & npm run dev --prefix control-panel

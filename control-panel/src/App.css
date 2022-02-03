@@ -1,0 +1,43 @@
+/* .App {
+  text-align: center;
+} */
+.table--users {
+  background-color: #494949;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.userdiv {
+  background-color: #494949;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  height: 25px;
+}
+
+.form--user {
+  margin-top: 20px;
+  width: 300px;
+}
+.form--user--input {
+  display: flex;
+  flex-direction: column;
+}
+.cell {
+  width: 110px;
+  text-align: center;
+}
+.cell--button {
+  width: 100%;
+}
+.error--color {
+  color: red;
+}
+.usercell--input {
+  width: 100px;
+}
