@@ -1,16 +1,19 @@
-<script>
+<script lang="ts">
 	import { fetchUserById } from '../../stores/users';
+	import type { User } from "../../types";
 
 	let userId = '';
 
-	let fetcherUserById;
-	async function onFetchUserById(id) {
+	let fetcherUserById: User;
+	async function onFetchUserById(id:string) {
 		if (id === '') return;
 		const result = await fetchUserById(id);
 		if (result === undefined) {
 			alert("user by id not found");
-		} else 
-			fetcherUserById = result;
+		} else {
+			if (result instanceof Object)
+				fetcherUserById = result;
+		}
 	}
 </script>
 

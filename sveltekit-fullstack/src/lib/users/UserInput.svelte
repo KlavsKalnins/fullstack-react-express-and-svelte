@@ -18,8 +18,8 @@
 </script>
 
 <div>
-	<input type="text" bind:value={name} />
-	<input type="number" bind:value={age} />
-	<input type="number" bind:value={height} />
+	<input placeholder="name.." type="text" bind:value={name} />
+	<input placeholder="age.." type="number" bind:value={age} />
+	<input placeholder="height.." type="number" bind:value={height} />
 	<button on:click={onUserCreate}>Create User</button>
 </div>

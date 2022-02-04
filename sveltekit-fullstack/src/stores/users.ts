@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import type { Writable } from 'svelte/store';
 import type { User } from 'src/types';
 
 export const setUsers = function () {
@@ -9,7 +10,6 @@ export async function fetchUsers() {
 	const res = await fetch('/api/users');
 	const jsonRes = await res.json();
 	user.set(jsonRes.result);
-	// console.warn(jsonRes);
 }
 
 export async function addUser(user: User) {
@@ -24,7 +24,7 @@ export async function addUser(user: User) {
 	}
 }
 
-export async function delUser(user) {
+export async function delUser(user: User) {
 	try {
 		await fetch('/api/users', {
 			method: 'DELETE',
@@ -36,11 +36,11 @@ export async function delUser(user) {
 	}
 }
 
-export async function fetchUserById(id): Promise<string | User> {
-	if (id === '') return;
+export async function fetchUserById(id: string): Promise<string | User> {
+	if (id === '') return 'invalid id';
 	const res = await fetch('/api/users/' + id);
 	const jsonRes = await res.json();
 	return jsonRes.result;
 }
 
-export const user = writable([], setUsers);
+export const user:Writable<User[]> = writable([], setUsers);
