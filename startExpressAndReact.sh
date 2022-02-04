@@ -1,1 +1,1 @@
-npm start --prefix backend & npm run dev --prefix control-panel
+npm start --prefix backend & npm start --prefix control-panel

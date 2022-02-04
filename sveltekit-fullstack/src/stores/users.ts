@@ -9,7 +9,7 @@ export async function fetchUsers() {
 	const res = await fetch('/api/users');
 	const jsonRes = await res.json();
 	user.set(jsonRes.result);
-	console.warn(jsonRes);
+	// console.warn(jsonRes);
 }
 
 export async function addUser(user: User) {

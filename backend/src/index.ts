@@ -21,3 +21,5 @@ app.listen(port, () => {
   console.log(`backend deployed on port ${port}`);
 });
 // adb reverse tcp:3001 tcp:3001 - for unix if cannot access form diff port
+
+export const viteNodeApp = app;

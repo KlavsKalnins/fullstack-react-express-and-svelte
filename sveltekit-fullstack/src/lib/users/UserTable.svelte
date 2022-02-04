@@ -33,7 +33,7 @@
 	.user--text {
 		text-align: center;
 		padding: 0px 20px;
-		background-color: rgb(60, 87, 42);
+		background-color: rgba(60, 87, 42, 0.267);
 	}
 	.user {
 		display: flex;
