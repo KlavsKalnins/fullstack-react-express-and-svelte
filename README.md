@@ -1,4 +1,4 @@
-# fullstack-react-express-and-svelte
+# React vs Sveltekit
 
 run React+Express = npm start --prefix backend & npm start --prefix control-panel
 
